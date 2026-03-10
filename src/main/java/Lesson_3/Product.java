@@ -8,7 +8,6 @@ public class Product {
     private double price;
     private boolean reservationStatus;
 
-    
     public Product(String name, String productionDate, String manufacturer, String countryOfOrigin,
                    double price, boolean reservationStatus) {
         this.name = name;
@@ -19,7 +18,6 @@ public class Product {
         this.reservationStatus = reservationStatus;
     }
 
-    
     public void printInfo() {
         String status = reservationStatus ? "Забронировано" : "Свободно";
         System.out.println("Название: " + name);
