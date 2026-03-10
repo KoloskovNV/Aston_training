@@ -18,17 +18,17 @@ public class Main {
             System.out.println("Товар №" + (i + 1) + ":");
             productsArray[i].printInfo();
         }
-            System.out.println();
-            System.out.println("Парки:");
-            Park park1 = new Park("Городской парк имени Горького", "Саратов");
-            Park.Attraction ride1 = park1.new Attraction("Сюрприз", "10:00 - 20:00", 400);
-            park1.setAttraction(ride1);
-            Park park2 = new Park("Парк культуры и отдыха имени Ю. А. Гагарина", "Самара");
-            Park.Attraction ride2 = park2.new Attraction("Колесо обозрения", "10:00 - 20:00", 500);
-            park2.setAttraction(ride2);
-            System.out.println("Парк 1:");
-            park1.getAttraction().printInfo();
-            System.out.println("Парк 2:");
-            park2.getAttraction().printInfo();
-        }
+        System.out.println();
+        System.out.println("Парки:");
+        Park park1 = new Park("Городской парк имени Горького", "Саратов");
+        Park.Attraction ride1 = park1.new Attraction("Сюрприз", "10:00 - 20:00", 400);
+        park1.setAttraction(ride1);
+        Park park2 = new Park("Парк культуры и отдыха имени Ю. А. Гагарина", "Самара");
+        Park.Attraction ride2 = park2.new Attraction("Колесо обозрения", "10:00 - 20:00", 500);
+        park2.setAttraction(ride2);
+        System.out.println("Парк 1:");
+        park1.getAttraction().printInfo();
+        System.out.println("Парк 2:");
+        park2.getAttraction().printInfo();
     }
+}
