@@ -21,17 +21,36 @@ public class Triangle implements Shape {
     @Override
     public double getArea() {
         double p = getPerimeter() / 2;
-        return Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC)); }
+        return Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
+    }
+
     @Override
-    public double getPerimeter() { return sideA + sideB + sideC; }
+    public double getPerimeter() {
+        return sideA + sideB + sideC;
+    }
+
     @Override
-    public String getName() { return "Треугольник"; }
+    public String getName() {
+        return "Треугольник";
+    }
+
     @Override
-    public String getFillColor() { return fillColor; }
+    public String getFillColor() {
+        return fillColor;
+    }
+
     @Override
-    public void setFillColor(String color) { this.fillColor = color; }
+    public void setFillColor(String color) {
+        this.fillColor = color;
+    }
+
     @Override
-    public String getBorderColor() { return borderColor; }
+    public String getBorderColor() {
+        return borderColor;
+    }
+
     @Override
-    public void setBorderColor(String color) { this.borderColor = color; }
+    public void setBorderColor(String color) {
+        this.borderColor = color;
+    }
 }

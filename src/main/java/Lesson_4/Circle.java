@@ -13,18 +13,39 @@ public class Circle implements Shape {
         this.fillColor = fillColor;
         this.borderColor = borderColor;
     }
+
     @Override
-    public double getArea() { return Math.PI * radius * radius; }
+    public double getArea() {
+        return Math.PI * radius * radius;
+    }
+
     @Override
-    public double getPerimeter() { return 2 * Math.PI * radius; }
+    public double getPerimeter() {
+        return 2 * Math.PI * radius;
+    }
+
     @Override
-    public String getName() { return "Круг"; }
+    public String getName() {
+        return "Круг";
+    }
+
     @Override
-    public String getFillColor() { return fillColor; }
+    public String getFillColor() {
+        return fillColor;
+    }
+
     @Override
-    public void setFillColor(String color) { this.fillColor = color; }
+    public void setFillColor(String color) {
+        this.fillColor = color;
+    }
+
     @Override
-    public String getBorderColor() { return borderColor; }
+    public String getBorderColor() {
+        return borderColor;
+    }
+
     @Override
-    public void setBorderColor(String color) { this.borderColor = color; }
+    public void setBorderColor(String color) {
+        this.borderColor = color;
+    }
 }

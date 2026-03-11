@@ -10,7 +10,7 @@ public class Cat extends Animal {
     }
 
     public void catIsEating(Bowl bowl, int amountFood) {
-        if(bowl.getFood() >= amountFood) {
+        if (bowl.getFood() >= amountFood) {
             bowl.eatFood(amountFood);
             this.isNotHungry = true;
             System.out.println(name + " съел " + amountFood + " еды");
@@ -19,7 +19,10 @@ public class Cat extends Animal {
         }
     }
 
-    public boolean isNotHungry() { return isNotHungry; }
+    public boolean isNotHungry() {
+        return isNotHungry;
+    }
+
     public void printCatStatus() {
         System.out.println(name + (isNotHungry ? " сытый" : " голодный"));
     }

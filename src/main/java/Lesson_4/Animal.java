@@ -20,8 +20,7 @@ public class Animal {
     public void run(int lenght) {
         if (lenght <= runningLenght) {
             System.out.println(name + " пробежал " + lenght + " м");
-        }
-        else {
+        } else {
             System.out.println(name + " не пробежал " + lenght + " м, " + "больше " + runningLenght + " м пробежать не может");
         }
     }
@@ -33,13 +32,20 @@ public class Animal {
         }
         if (lenght <= swimmingLenght) {
             System.out.println(name + " проплыл " + lenght + " м");
-        }
-        else {
+        } else {
             System.out.println(name + " не проплыл " + lenght + " м, " + "больше " + swimmingLenght + " м проплыть не может");
         }
     }
 
-    public static int getNumberAnimal() { return numberAnimal; }
-    public static int getNumberCat() { return numberCat; }
-    public static int getNumberDog() { return numberDog; }
+    public static int getNumberAnimal() {
+        return numberAnimal;
+    }
+
+    public static int getNumberCat() {
+        return numberCat;
+    }
+
+    public static int getNumberDog() {
+        return numberDog;
+    }
 }

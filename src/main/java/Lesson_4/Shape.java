@@ -1,8 +1,10 @@
 package Lesson_4;
 
-public interface Shape extends Colored{
+public interface Shape extends Colored {
     double getPerimeter();
+
     double getArea();
+
     String getName();
 
     default void printInfo() {

@@ -7,7 +7,7 @@ public class Rectangle implements Shape {
     private String borderColor;
 
     public Rectangle(double sideA, double sideB, String fillColor, String borderColor) {
-        if (!validateParam(sideA) || ! validateParam(sideB)) {
+        if (!validateParam(sideA) || !validateParam(sideB)) {
             throw new IllegalArgumentException("Стороны не могут быть отрицательными!");
         }
         this.sideA = sideA;
@@ -15,18 +15,39 @@ public class Rectangle implements Shape {
         this.fillColor = fillColor;
         this.borderColor = borderColor;
     }
+
     @Override
-    public double getArea() { return sideA * sideB; }
+    public double getArea() {
+        return sideA * sideB;
+    }
+
     @Override
-    public double getPerimeter() { return 2 * (sideA + sideB); }
+    public double getPerimeter() {
+        return 2 * (sideA + sideB);
+    }
+
     @Override
-    public String getName() { return "Прямоугольник"; }
+    public String getName() {
+        return "Прямоугольник";
+    }
+
     @Override
-    public String getFillColor() { return fillColor; }
+    public String getFillColor() {
+        return fillColor;
+    }
+
     @Override
-    public void setFillColor(String color) { this.fillColor = color; }
+    public void setFillColor(String color) {
+        this.fillColor = color;
+    }
+
     @Override
-    public String getBorderColor() { return borderColor; }
+    public String getBorderColor() {
+        return borderColor;
+    }
+
     @Override
-    public void setBorderColor(String color) { this.borderColor = color; }
+    public void setBorderColor(String color) {
+        this.borderColor = color;
+    }
 }
