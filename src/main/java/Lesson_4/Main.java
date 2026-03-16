@@ -36,7 +36,7 @@ public class Main {
         bowl.printInfo();
         System.out.println("Коты кушают: ");
         for (Cat cat : cats) {
-            cat.catIsEating(bowl, 15);
+            cat.catEat(bowl, 15);
         }
         System.out.println();
         System.out.println("Проверка сытости котов:");
@@ -50,7 +50,7 @@ public class Main {
         System.out.println("Голодные коты кушают");
         for (Cat cat : cats) {
             if (!cat.isNotHungry()) {
-                cat.catIsEating(bowl, 15);
+                cat.catEat(bowl, 15);
             }
         }
         bowl.printInfo();
