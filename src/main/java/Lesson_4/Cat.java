@@ -9,7 +9,7 @@ public class Cat extends Animal {
         numberCat++;
     }
 
-    public void catIsEating(Bowl bowl, int amountFood) {
+    public void eat(Bowl bowl, int amountFood) {
         if (bowl.getFood() >= amountFood) {
             bowl.eatFood(amountFood);
             this.isNotHungry = true;
