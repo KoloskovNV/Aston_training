@@ -1,31 +1,24 @@
 package Lesson_7_testng;
 
 public class Compare {
-    public static boolean isEqual(int a, int b) {
+
+    public boolean isEqual(int a, int b) {
         return a == b;
     }
 
-    public static boolean isGreater(int a, int b) {
+    public boolean isGreater(int a, int b) {
         return a > b;
     }
 
-    public static boolean isLess(int a, int b) {
+    public boolean isLess(int a, int b) {
         return a < b;
     }
 
-    public static int max(int a, int b) {
-        if (a > b) {
-            return a;
-        } else {
-            return b;
-        }
+    public int max(int a, int b) {
+        return Math.max(a, b);
     }
 
-    public static int min(int a, int b) {
-        if (a < b) {
-            return a;
-        } else {
-            return b;
-        }
+    public int min(int a, int b) {
+        return Math.min(a, b);
     }
 }

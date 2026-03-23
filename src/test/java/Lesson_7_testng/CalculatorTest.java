@@ -1,12 +1,12 @@
 package Lesson_7_testng;
 
-import org.junit.jupiter.api.DisplayName;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
 
 public class CalculatorTest {
+    public final Calculator calculator = new Calculator();
 
     @DataProvider(name = "addData")
     public Object[][] addData() {
@@ -16,10 +16,9 @@ public class CalculatorTest {
         };
     }
 
-    @Test(dataProvider = "addData")
-    @DisplayName("Сложение")
+    @Test(dataProvider = "addData", description = "Сложение")
     public void testAdd(int a, int b, int expected) {
-        assertEquals(Calculator.add(a, b), expected);
+        assertEquals(calculator.add(a, b), expected);
     }
 
     @DataProvider(name = "subtractData")
@@ -30,43 +29,39 @@ public class CalculatorTest {
         };
     }
 
-    @Test(dataProvider = "subtractData")
-    @DisplayName("Вычитание")
+    @Test(dataProvider = "subtractData", description = "Вычитание")
     public void testSubtract(int a, int b, int expected) {
-        assertEquals(Calculator.subtract(a, b), expected);
+        assertEquals(calculator.subtract(a, b), expected);
     }
 
-    @DataProvider(name = "multiplData")
-    public Object[][] multiplData() {
+    @DataProvider(name = "multiplyData")
+    public Object[][] multiplyData() {
         return new Object[][]{
                 {10, 5, 50},
                 {-5, 0, 0}
         };
     }
 
-    @Test(dataProvider = "multiplData")
-    @DisplayName("Умножение")
-    public void testMultipl(int a, int b, int expected) {
-        assertEquals(Calculator.multipl(a, b), expected);
+    @Test(dataProvider = "multiplyData", description = "Умножение")
+    public void testMultiply(int a, int b, int expected) {
+        assertEquals(calculator.multiply(a, b), expected);
     }
 
-    @DataProvider(name = "divisiData")
-    public Object[][] divisiData() {
+    @DataProvider(name = "divideData")
+    public Object[][] divideData() {
         return new Object[][]{
                 {10, 5, 2.0},
                 {-5, 1, -5.0}
         };
     }
 
-    @Test(dataProvider = "divisiData")
-    @DisplayName("Деление")
-    public void testDivisi(int a, int b, double expected) {
-        assertEquals(Calculator.divisi(a, b), expected, 0.001);
+    @Test(dataProvider = "divideData", description = "Деление")
+    public void testDivsde(int a, int b, double expected) {
+        assertEquals(calculator.divide(a, b), expected, 0.001);
     }
 
-    @Test(expectedExceptions = ArithmeticException.class)
-    @DisplayName("Деление на 0 выбрасывает исключение")
-    public void testDivisiByZero() {
-        Calculator.divisi(10, 0);
+    @Test(expectedExceptions = ArithmeticException.class, description = "Деление на 0 выбрасывает исключение")
+    public void testDivideByZero() {
+        calculator.divide(10, 0);
     }
 }

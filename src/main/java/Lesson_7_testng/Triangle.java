@@ -1,7 +1,8 @@
 package Lesson_7_testng;
 
 public class Triangle {
-    public static double area(double base, double height) {
+
+    public double area(double base, double height) {
         if (base <= 0) {
             throw new IllegalArgumentException("Основание должно быть > 0: " + base);
         }
