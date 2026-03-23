@@ -8,13 +8,16 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CalculatorTest {
+
+    private final Calculator calculator = new Calculator();
+
     @ParameterizedTest
     @CsvSource({
             "10, 5, 15",
             "-5, 0, -5"})
     @DisplayName("Сложение")
     public void testAdd(int a, int b, int expected) {
-        assertEquals(expected, Calculator.add(a, b));
+        assertEquals(expected, calculator.add(a, b));
     }
 
     @ParameterizedTest
@@ -23,7 +26,7 @@ public class CalculatorTest {
             "-5, 0, -5"})
     @DisplayName("Вычитание")
     public void testSubtract(int a, int b, int expected) {
-        assertEquals(expected, Calculator.subtract(a, b));
+        assertEquals(expected, calculator.subtract(a, b));
     }
 
     @ParameterizedTest
@@ -31,8 +34,8 @@ public class CalculatorTest {
             "10, 5, 50",
             "-5, 0, 0"})
     @DisplayName("Умножение")
-    public void testMultipl(int a, int b, int expected) {
-        assertEquals(expected, Calculator.multipl(a, b));
+    public void testMultiply(int a, int b, int expected) {
+        assertEquals(expected, calculator.multiply(a, b));
     }
 
     @ParameterizedTest
@@ -40,15 +43,14 @@ public class CalculatorTest {
             "10, 5, 2",
             "-5, 1, -5"})
     @DisplayName("Деление")
-    public void testDivisi(int a, int b, int expected) {
-        assertEquals(expected, Calculator.divisi(a, b));
+    public void testDivide(int a, int b, int expected) {
+        assertEquals(expected, calculator.divide(a, b));
     }
 
     @Test
     @DisplayName("Деление на 0 выбрасывает исключение")
-    public void testDivisiByZero() {
-        assertThrows(ArithmeticException.class, () -> {
-            Calculator.divisi(10, 0);
-        });
+    public void testDivideByZero() {
+        assertThrows(ArithmeticException.class, () ->
+            calculator.divide(10, 0));
     }
 }
